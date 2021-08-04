@@ -1,0 +1,109 @@
+.nav{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    position:fixed;
+    background-color:rgb(92, 98, 182);
+    padding:2rem;
+    align-items:center;
+    gap:3rem;
+    font-size:1.3rem;
+    box-shadow: 0px 0px 0px 1px ;
+    transition:400ms ;
+    width: 100%;
+    transform: translateX(-100%);
+    color:white;;
+}
+
+.hamburger{
+    position:absolute;
+    right:1rem;
+    top:1rem;
+    display:flex;
+
+}
+.check, .ex{
+
+position: absolute;
+
+    width: 50px;
+    height: 5px;
+    margin: 2px;
+    padding: 2px;
+}
+.ex{
+    right:1rem;
+    top:1rem;
+    width:30px
+}
+
+.checker:checked  + .nav{
+
+  transform: translateX(0px)
+}
+.checker{
+    display: none;
+}
+.laterHidden{
+    display: none
+}
+@media screen and (min-width: 500px) {
+  
+    .check, .ex{
+        display:none;
+    }
+    .nav{
+        position:fixed;
+        transform: translateX(0);
+        width:12rem;
+        align-items:center;
+        flex-wrap: wrap;
+        padding:0;
+    }
+    a:active{
+        background: #000;
+        width:90%;
+        display:inline
+    }
+    .laterHidden{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        gap: 2rem;
+        /* flex-wrap: wrap;background: red; */
+        width:12rem;
+        margin-top: 5rem;
+        
+    }
+    .smallScreen{
+        display:none
+    }
+    .active{
+        display:none
+    }
+    .active + div{
+         width:11.5rem;
+         text-align:center;
+         transform: translateX(20px);
+         padding:1rem;
+         /* background: yellow; */
+         border-radius: 40px 10px 0px 40px;
+         color:white;
+         transition: all 300ms ease-in-out;
+
+    }
+    .active:checked + div{
+        /* padding:1px 20px; */
+ background: white;
+ color:black;
+         box-shadow:0px 0px 0px 1px #333;
+
+
+
+    }
+      .active:checked+div {
+        transform:scale(1.03);
+        margin-left:3px;    }
+    
+
+}
